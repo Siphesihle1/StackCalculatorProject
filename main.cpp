@@ -13,12 +13,13 @@ int main()
 
 	if (choice == 1) {
 		cout << "\nEnter the operation in infix notation: ";
+		cin.ignore();
 		getline(cin, operation);
 		cout << calculate(to_postfix(operation)) << endl;
 	} else {
 
 		cout << "\nEnter the operation in post-fix notation: " << endl;
-		//getline(cin);
+		cin.ignore();
 		getline(cin, operation);
 		cout << calculate_extra(operation) << endl;
 	}

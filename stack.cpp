@@ -110,17 +110,15 @@ int operate(int a, int b, char o) {
 
 bool is_numeric(string s)
 {
-	bool numeric = true;
 
 	for (char c : s) {
 		//int a = c - '0';
 		if (!(c >='0' && c <= '9')) {
-			numeric  = false;
-			break;
+			return false;
 		}
 	} 
 	
-	return numeric;
+	return true;
 }
 
 
@@ -253,9 +251,6 @@ int calculate_extra(string postfix)
 	} else {
 		throw ("Malformed expression");
 	}
-
-
-	
 	
 }
 
